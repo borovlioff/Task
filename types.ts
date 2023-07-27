@@ -3,6 +3,7 @@ export type TaskId = string;
 
 
 export interface Task{
+    id:TaskId,
     title:string,
     description:string
 }
@@ -33,4 +34,12 @@ export interface UpdateTaskPayload{
 
 export interface DeleteTaskPayload{
     id:TaskId
+}
+
+export enum TaskActionTypes {
+	getTasks = "getTasks",
+	getTaskById = "getTaskById",
+	createTask = "createTask",
+	DELETE_TASK = "delete_task",
+	updateTask = "updateTask",
 }
